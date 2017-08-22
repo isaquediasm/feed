@@ -12,6 +12,8 @@ app.get('/feed/:offset', (req, res) => {
       if (!err) {
         res.send({ result: data.body, error: false })
       } else {
+        console.log('======== ERROR ========')
+        console.log(err)
         res.send({ error: true })
       }
     })
