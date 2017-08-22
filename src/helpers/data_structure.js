@@ -8,7 +8,9 @@
 const createHashMap = (arr, key) => {
   return Object.assign(
     ...arr.map(item => (
-      { [ item[key] ]: item }
+      { 
+        [item[key]]: arr.filter(val => val[key] === item[key])
+      }
     ))
   )
 }

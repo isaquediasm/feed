@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+.feed-item {
+  width: 50%;
+  background: #fff;
+  margin: 0 auto; 
+  padding: $spacer $spacer * 4;
+
+  &__title {
+    font-size: $title_size;
+  }
+}
