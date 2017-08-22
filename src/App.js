@@ -17,6 +17,8 @@ class App extends Component {
   }
 
   fetchFeed = async() => {
+    this.setState({ loading: true })
+  
     const { offset, feed, hash } = this.state
     const _feed = await getFeed(offset)
     
@@ -29,16 +31,17 @@ class App extends Component {
         hash: createHashMap(newFeed, 'type'), // Create a hashmap for filtering
         feed: newFeed,
         offset: offset + 1,
+        loading: false,
       })
     }
   }
 
   render() {
-    const { feed } = this.state
+    const { feed, loading } = this.state
 
     return (
       <div className="App">
-        { feed && <FeedContainer data={feed} onLoadMore={this.fetchFeed} /> }
+        { feed && <FeedContainer loading={loading} data={feed} onLoadMore={this.fetchFeed} /> }
       </div>
     )
   }
