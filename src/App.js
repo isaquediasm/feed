@@ -4,6 +4,14 @@ import './App.css';
 
 class App extends Component {
   render() {
+
+    fetch('https://assets-diverse.s3.amazonaws.com/development/test-task/data1.json', {
+      method: 'GET',
+      cors: 'no-cors',
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+
     return (
       <div className="App">
         <div className="App-header">
