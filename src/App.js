@@ -5,9 +5,8 @@ import './App.css';
 class App extends Component {
   render() {
 
-    fetch('https://assets-diverse.s3.amazonaws.com/development/test-task/data1.json', {
+    fetch('http://localhost:8080/feed/1', {
       method: 'GET',
-      cors: 'no-cors',
     })
     .then(response => response.json())
     .then(data => console.log(data))

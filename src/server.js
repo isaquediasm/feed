@@ -8,9 +8,9 @@ app.use(cors())
 app.get('/feed/:offset', (req, res) => {
   request
     .get(getUrl(req.params.offset))
-    .end((err, res) => {
+    .end((err, data) => {
       if (!err) {
-        res.send({ result: res.body, error: false })
+        res.send({ result: data.body, error: false })
       } else {
         res.send({ error: true })
       }
