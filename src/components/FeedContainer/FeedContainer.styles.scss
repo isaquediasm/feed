@@ -1,8 +1,20 @@
 @import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
 
 .feed-container {
   width: 50%;
   margin: 0 auto;
+
+  .load-btn {
+    cursor: pointer;
+    background-color: #8e8e9a;
+    float: left;
+    padding: $spacer * 2;
+    color: #fff;
+    font-weight: bolder;
+    border-radius: $spacer;
+    margin-top: $spacer;
+  }
 
   @include respond-to(handhelds) {
     width: 95%;

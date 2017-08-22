@@ -4,6 +4,21 @@
   margin: 16px auto;
   padding: 8px 32px 24px;
   border-radius: 8px; }
+  @media only screen and (max-width: 320px) {
+    .feed-item {
+      width: calc(100% - 32px);
+      margin: 72px 0 96px;
+      padding: 8px 16px 16px; } }
+  @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    .feed-item {
+      width: calc(100% - 32px);
+      margin: 72px 0 96px;
+      padding: 8px 16px 16px; } }
+  .feed-item__avatar {
+    position: relative;
+    border-radius: 50%;
+    top: 24px;
+    margin-right: 16px; }
   .feed-item__time {
     position: relative;
     margin-left: -176px;
@@ -14,14 +29,32 @@
     border-radius: 8px; }
     @media only screen and (max-width: 320px) {
       .feed-item__time {
-        margin: 0;
-        padding: 5px 0;
-        margin-top: 0;
-        float: none; } }
+        float: right;
+        margin-top: -64px;
+        margin-right: -24px; } }
     @media only screen and (min-width: 321px) and (max-width: 1023px) {
       .feed-item__time {
-        float: right; } }
+        float: right;
+        margin-top: -72px;
+        margin-right: -24px; } }
   .feed-item__type {
     font-size: 16px; }
   .feed-item__content {
     overflow-wrap: break-word; }
+    .feed-item__content img {
+      width: 100%;
+      height: auto; }
+    .feed-item__content-price {
+      border: 2px dashed #f1f1f1;
+      font-size: 2em;
+      /* float: right; */
+      padding: 8px;
+      margin-top: 32px;
+      display: block;
+      width: 160px;
+      text-align: center;
+      margin: 16px auto; }
+  .feed-item__card {
+    border-left: 2px solid #f1f1f1;
+    padding: 4px 24px;
+    margin-top: 8px; }

@@ -9,7 +9,7 @@ const FeedContainer = ({ data, onLoadMore }) => (
       <FeedItem key={idx} {...item} />
     ))}
     
-    <a onClick={onLoadMore}>Load more</a>
+    <a className="load-btn" onClick={onLoadMore}>Load more</a>
   </div>
 )
 

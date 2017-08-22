@@ -8,24 +8,43 @@
   padding: $spacer $spacer * 4 $spacer * 3;
   border-radius: $spacer;
 
+  @include respond-to(handhelds) {
+    width: calc(100% - 32px);
+    margin: $spacer * 9 0 $spacer * 12;
+    padding: $spacer $spacer * 2 $spacer * 2;
+  }
+
+  @include respond-to(medium-screens) {
+    width: calc(100% - 32px);
+    margin: $spacer * 9 0 $spacer * 12;
+    padding: $spacer $spacer * 2 $spacer * 2;
+  }
+
+  &__avatar {
+    position: relative;
+    border-radius: 50%;
+    top: $spacer * 3;
+    margin-right: $spacer * 2;
+  }
   &__time {
     position: relative;
     margin-left: -$spacer * 22;
     background: #fff;
-    padding: 16px;
+    padding: $spacer * 2;
     margin-top: -$spacer;
     float: left;
     border-radius: $spacer;
 
     @include respond-to(handhelds) {
-      margin: 0;
-      padding: 5px 0;
-      margin-top: 0;
-      float: none;
+      float: right;
+      margin-top: -$spacer * 8;
+      margin-right: -$spacer * 3;
     }
 
     @include respond-to(medium-screens) {
       float: right;
+      margin-top: -$spacer * 9;
+      margin-right: -$spacer * 3;
     }
   }
 
@@ -35,5 +54,28 @@
 
   &__content {
     overflow-wrap: break-word;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &-price {
+      border: 2px dashed #f1f1f1;
+      font-size: 2em;
+      /* float: right; */
+      padding: $spacer;
+      margin-top: $spacer * 4;
+      display: block;
+      width: $spacer * 20;
+      text-align: center;
+      margin: $spacer * 2 auto;
+    }
+  }
+
+  &__card {
+    border-left: 2px solid #f1f1f1;
+    padding: $spacer / 2 $spacer * 3;
+    margin-top: $spacer;
   }
 }

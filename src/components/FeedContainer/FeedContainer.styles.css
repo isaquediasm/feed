@@ -1,6 +1,15 @@
 .feed-container {
   width: 50%;
   margin: 0 auto; }
+  .feed-container .load-btn {
+    cursor: pointer;
+    background-color: #8e8e9a;
+    float: left;
+    padding: 16px;
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 8px;
+    margin-top: 8px; }
   @media only screen and (max-width: 320px) {
     .feed-container {
       width: 95%; } }
