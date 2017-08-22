@@ -38,7 +38,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h2>Activity Feed</h2>
         { feed && <FeedContainer data={feed} onLoadMore={this.fetchFeed} /> }
       </div>
     )
