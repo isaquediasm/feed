@@ -1,6 +1,7 @@
 
 =)
 
+Running in development
 ```
 npm start
 npm start-api
