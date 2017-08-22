@@ -3,6 +3,7 @@
 
 Running in development
 ```
+npm install
 npm start
 npm start-api
 ```
